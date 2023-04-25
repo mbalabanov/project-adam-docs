@@ -1,282 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marin Comics</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      .video-container {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marin Comics</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <style>
-    .video-container {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-    }
+      .video-container::after {
+        padding-top: 56.25%;
+        display: block;
+        content: "";
+      }
 
-    .video-container::after {
-      padding-top: 56.25%;
-      display: block;
-      content: "";
-    }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
 
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-</head>
+  <body>
+    <nav
+      class="d-flex flex-wrap justify-content-center p-3 bg-primary bg-gradient text-light"
+    >
+      <a
+        href="https://marincomics.com"
+        class="d-flex align-items-center mb-md-1 me-md-auto text-dark text-decoration-none"
+      >
+        <img
+          src="https://marincomics.com/img/marincomics-logo.png"
+          alt="Marin Comics"
+          height="50px"
+        />
+      </a>
 
-<body>
-  <nav class="d-flex flex-wrap justify-content-center p-3 bg-primary bg-gradient text-light">
-    <a href="https://marincomics.com"
-      class="d-flex align-items-center mb-md-1 me-md-auto text-dark text-decoration-none">
-      <img src="https://marincomics.com/img/marincomics-logo.png" alt="Marin Comics" height="50px" />
-    </a>
-    <ul class="nav nav-pills me-4">
-      <li class="nav-item">
-        <a href="https://marincomics.com/index.html#comics" class="nav-link link-light">Comics</a>
-      </li>
-      <li class="nav-item">
-        <a href="https://marincomics.com/index.html#dev-projects" class="nav-link link-light">Dev-Projects</a>
-      </li>
-      <li class="nav-item">
-        <a href="https://marincomics.com/index.html#writing" class="nav-link link-light">Writing</a>
-      </li>
-      <li class="nav-item">
-        <a href="https://marincomics.com/index.html#videos" class="nav-link link-light">Videos</a>
-      </li>
-      <li class="nav-item">
-        <a href="https://marincomics.com/about.html" class="nav-link link-light">About</a>
-      </li>
-    </ul>
-  </nav>
+      <ul class="nav nav-pills me-4">
+        <li class="nav-item">
+          <a
+            href="https://marincomics.com/index.html#dev-projects"
+            class="nav-link link-light"
+            >Dev-Projects</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://marincomics.com/index.html#comics"
+            class="nav-link link-light"
+            >Comics</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://marincomics.com/index.html#writing"
+            class="nav-link link-light"
+            >Writing</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://marincomics.com/index.html#videos"
+            class="nav-link link-light"
+            >Videos</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://marincomics.com/about.html"
+            class="nav-link link-light"
+            >About</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-  <div class="container p-4">
-    <div class="row pt-2">
-      <main class="col-md-12">
-        <p class="text-center">
-          <a href="https://demoarchive.art" target="_blank"><img src="img/adam-logo.png" alt="ADAM" max-height="100px"
-              class="img-fluid" /></a>
-        </p>
-        <h3 class="text-center">
-          ADAM, the Archive of Digital Art and Media
-        </h3>
-        <p class="text-center">
-          <a href="https://demoarchive.art" target="_blank" class="btn btn-outline-primary m-2">ADAM Web App</a>
-          <a href="http://github.com/mbalabanov/adam" target="_blank" class="btn btn-outline-primary m-2">Frontend
-            GitHub Repository</a>
-          <a href="http://github.com/mbalabanov/adam-api" target="_blank" class="btn btn-outline-primary m-2">API GitHub
-            Repository</a>
-        </p>
+    <div class="container p-4">
+      <div class="row pt-2">
+        <main class="col-md-12">
+          <p class="text-center">
+            <a href="https://demoarchive.art" target="_blank"
+              ><img
+                src="img/adam-logo.png"
+                alt="ADAM"
+                max-height="100px"
+                class="img-fluid"
+            /></a>
+          </p>
+          <h3 class="text-center">
+            ADAM, the Archive of Digital Art and Media
+          </h3>
+          <p class="text-center">
+            <a
+              href="https://demoarchive.art"
+              target="_blank"
+              class="btn btn-outline-primary m-2"
+              >ADAM Web App</a
+            >
+            <a
+              href="http://github.com/mbalabanov/adam"
+              target="_blank"
+              class="btn btn-outline-primary m-2"
+              >Frontend GitHub Repository</a
+            >
+            <a
+              href="http://github.com/mbalabanov/adam-api"
+              target="_blank"
+              class="btn btn-outline-primary m-2"
+              >API GitHub Repository</a
+            >
+          </p>
 
-        <p>
-          <strong>ADAM, the Archive of Digital Art and Media</strong> is an
-          art archive with an Angular frontend and an API served through
-          Express/NodeJS. I developed it as part of my
-          <a href="https://marincomics.com/project-demoscene-exceptions/" target="_blank">master's thesis</a>
-          for my MA in Media Art History in July and August of 2020. This is
-          an exercise in the use of web technologies and a prototype for an
-          archive of new media art. You can find the finished product at
-          <a href="https://demoarchive.art" target="_blank">demoarchive.art</a>
-        </p>
+          <p>
+            <strong>ADAM, the Archive of Digital Art and Media</strong> is an
+            art archive with an Angular frontend and an API served through
+            Express/NodeJS. I developed it as part of my
+            <a
+              href="https://marincomics.com/project-demoscene-exceptions/"
+              target="_blank"
+              >master's thesis</a
+            >
+            for my MA in Media Art History in July and August of 2020. This is
+            an exercise in the use of web technologies and a prototype for an
+            archive of new media art. You can find the finished product at
+            <a href="https://demoarchive.art" target="_blank"
+              >demoarchive.art</a
+            >
+          </p>
 
-        <h4 class="text-center">A Quick Tour of ADAM</h4>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/rZMfmWkXdAY" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+          <h4 class="text-center">A Quick Tour of ADAM</h4>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/rZMfmWkXdAY"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <br /><a
+                href="https://youtu.be/rZMfmWkXdAY"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm m-2"
+                >Watch Video on Youtube</a
+              >
             </div>
-            <br /><a href="https://youtu.be/rZMfmWkXdAY" target="_blank"
-              class="btn btn-outline-primary btn-sm m-2">Watch Video on Youtube</a>
           </div>
+        </main>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 offset-md-1 p-4">
+          <h4>ADAM's Features</h4>
+          <p>
+            Users can search for digital demo artwork, on the detail pages, they
+            will find a description of the respective demo artifacts, as well as
+            photos, screenshots, and links to videos. Also, if available, they
+            will find ZIP files or disk images with the artifacts' original
+            files. There is also room for information about the artists, at
+            which events their works were exhibited, and at which demo parties
+            their works were created. The objective here was to program a custom
+            digital archive solution using modern technologies, a noSQL
+            database, strict separation between user interface, API (application
+            programming interface), and the database. It is hosted on Herkou, a
+            managed and secure cloud platform.
+          </p>
+          <p>
+            ADAM is a practical implementation, but it also lays the conceptual
+            groundwork for the user interface of a demo archive. It was inspired
+            by the Archive of Digital Art (ADA) at Danube University Krems. ADAM
+            only contains placeholder content at the time of this writing,
+            showcasing its user interface, the powerful search and filter
+            features, and its user management.
+          </p>
+          <h4>Details about ADAM</h4>
+          <p>
+            The full project documentation in German, including the source code
+            (HTML, CSS, and JavaScript using NodeJS and Angular) under a
+            Creative Commons license, can be found here:
+            <a href="https://mbalabanov.github.io/adam/" target="_blank"
+              >mbalabanov.github.io/adam</a
+            >
+          </p>
+
+          <p>ADAM consists of three parts:</p>
+          <ol>
+            <li>
+              The API server on
+              <a href="https://adam-interface.herokuapp.com" target="_blank"
+                >adam-interface.herokuapp.com</a
+              >
+              with interfaces to call up the data.
+            </li>
+            <li>
+              The website (web app) with a public area on
+              <a href="https://demoarchive.art" target="_blank"
+                >demoarchive.art</a
+              >
+              where visitors can find information about the demo art
+            </li>
+            <li>
+              An editorial area, also on
+              <a href="https://demoarchive.art" target="_blank"
+                >demoarchive.art</a
+              >, in which editors can enter and edit new content and
+              administrators can manage rights.
+            </li>
+          </ol>
+          <p>
+            This three-tiered structure might look fragmented with too many
+            component parts, but it in fact has many advantages. By separating
+            the different functions, ADAM can offer not only the web-frontend
+            for users visiting with a web browser, but at a later time, also
+            offer a mobile app. This is made possible by the separate
+            application programming interface (API). The API also allows for
+            ADAM to connect with other art archives and provides its data for a
+            federated search.
+          </p>
+          <p>
+            And the final advantage is that when a new and better technology
+            becomes available, any part of ADAM can be replaced individually
+            without interfering with the operations of the others.
+          </p>
+
+          <h4>ADAM Repositories</h4>
+          <p>ADAM consists of the following repositories:</p>
+          <ol>
+            <li>
+              ADAM Web Frontend
+              <a href="http://github.com/mbalabanov/adam" target="_blank"
+                >github.com/mbalabanov/adam </a
+              >(runs on Heroku at
+              <a href="https://adam- interface.herokuapp.com" target="_blank"
+                >adam- interface.herokuapp.com</a
+              >)
+            </li>
+            <li>
+              ADAM API Server
+              <a href="http://github.com/mbalabanov/adam-api" target="_blank"
+                >github.com/mbalabanov/adam-api</a
+              >
+              (runs on Heroku on
+              <a href="https://adam-frontend.herokuapp.com" target="_blank"
+                >adam-frontend.herokuapp.com</a
+              >
+              with CNAME entry on
+              <a href="http://app.demoarchive.art">app.demoarchive.art</a>)
+            </li>
+          </ol>
         </div>
-      </main>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6 offset-md-1 p-4">
-        <h4>ADAM's Features</h4>
-        <p>
-          Users can search for digital demo artwork, on the detail pages, they
-          will find a description of the respective demo artifacts, as well as
-          photos, screenshots, and links to videos. Also, if available, they
-          will find ZIP files or disk images with the artifacts' original
-          files. There is also room for information about the artists, at
-          which events their works were exhibited, and at which demo parties
-          their works were created. The objective here was to program a custom
-          digital archive solution using modern technologies, a noSQL
-          database, strict separation between user interface, API (application
-          programming interface), and the database. It is hosted on Herkou, a
-          managed and secure cloud platform.
-        </p>
-        <p>
-          ADAM is a practical implementation, but it also lays the conceptual
-          groundwork for the user interface of a demo archive. It was inspired
-          by the Archive of Digital Art (ADA) at Danube University Krems. ADAM
-          only contains placeholder content at the time of this writing,
-          showcasing its user interface, the powerful search and filter
-          features, and its user management.
-        </p>
-        <h4>Details about ADAM</h4>
-        <p>
-          The full project documentation in German, including the source code
-          (HTML, CSS, and JavaScript using NodeJS and Angular) under a
-          Creative Commons license, can be found here:
-          <a href="https://mbalabanov.github.io/adam/" target="_blank">mbalabanov.github.io/adam</a>
-        </p>
-
-        <p>ADAM consists of three parts:</p>
-        <ol>
-          <li>
-            The API server on
-            <a href="https://adam-interface.herokuapp.com" target="_blank">adam-interface.herokuapp.com</a>
-            with interfaces to call up the data.
-          </li>
-          <li>
-            The website (web app) with a public area on
-            <a href="https://demoarchive.art" target="_blank">demoarchive.art</a>
-            where visitors can find information about the demo art
-          </li>
-          <li>
-            An editorial area, also on
-            <a href="https://demoarchive.art" target="_blank">demoarchive.art</a>, in which editors can enter and edit
-            new content and
-            administrators can manage rights.
-          </li>
-        </ol>
-        <p>
-          This three-tiered structure might look fragmented with too many
-          component parts, but it in fact has many advantages. By separating
-          the different functions, ADAM can offer not only the web-frontend
-          for users visiting with a web browser, but at a later time, also
-          offer a mobile app. This is made possible by the separate
-          application programming interface (API). The API also allows for
-          ADAM to connect with other art archives and provides its data for a
-          federated search.
-        </p>
-        <p>
-          And the final advantage is that when a new and better technology
-          becomes available, any part of ADAM can be replaced individually
-          without interfering with the operations of the others.
-        </p>
-
-        <h4>ADAM Repositories</h4>
-        <p>ADAM consists of the following repositories:</p>
-        <ol>
-          <li>
-            ADAM Web Frontend
-            <a href="http://github.com/mbalabanov/adam" target="_blank">github.com/mbalabanov/adam </a>(runs on Heroku
-            at
-            <a href="https://adam- interface.herokuapp.com" target="_blank">adam- interface.herokuapp.com</a>)
-          </li>
-          <li>
-            ADAM API Server
-            <a href="http://github.com/mbalabanov/adam-api" target="_blank">github.com/mbalabanov/adam-api</a>
-            (runs on Heroku on
-            <a href="https://adam-frontend.herokuapp.com" target="_blank">adam-frontend.herokuapp.com</a>
-            with CNAME entry on
-            <a href="http://app.demoarchive.art">app.demoarchive.art</a>)
-          </li>
-        </ol>
-      </div>
-      <div class="col-md-5 text-center">
-        <img src="img/adam-description1.png" alt="The Archive of Demo Art and Media" class="img-fluid"
-          data-bs-toggle="modal" data-bs-target="#adam1" />
-        <p>
-          <button type="button" class="btn btn-outline-primary btn-sm m-2" data-bs-toggle="modal"
-            data-bs-target="#adam1">
-            Zoom Image
-          </button>
-        </p>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="adam1" tabindex="-1" aria-labelledby="adam1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-scrollable modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="adam1">ADAM's User Interface</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <img src="img/adam-description1.png" class="img-fluid" alt="ADAM's User Interface" />
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-              Close
+        <div class="col-md-5 text-center">
+          <img
+            src="img/adam-description1.png"
+            alt="The Archive of Demo Art and Media"
+            class="img-fluid"
+            data-bs-toggle="modal"
+            data-bs-target="#adam1"
+          />
+          <p>
+            <button
+              type="button"
+              class="btn btn-outline-primary btn-sm m-2"
+              data-bs-toggle="modal"
+              data-bs-target="#adam1"
+            >
+              Zoom Image
             </button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adam2"
-              data-bs-dismiss="modal">
-              Next &raquo;
-            </button>
-          </div>
+          </p>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h3>ADAM's Editor's Backend</h3>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6 offset-md-3 text-center">
-        <img src="img/adam-description2.png" alt="ADAM's Editor's Backend" class="img-fluid" data-bs-toggle="modal"
-          data-bs-target="#adam2" />
-        <p>
-          <button type="button" class="btn btn-outline-primary btn-sm m-2" data-bs-toggle="modal"
-            data-bs-target="#adam1">
-            Zoom Image
-          </button>
-        </p>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="adam2" tabindex="-1" aria-labelledby="adam2" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-scrollable modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="adam2">ADAM's Editor's Backend</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="adam1"
+        tabindex="-1"
+        aria-labelledby="adam1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="adam1">ADAM's User Interface</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                src="img/adam-description1.png"
+                class="img-fluid"
+                alt="ADAM's User Interface"
+              />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#adam2"
+                data-bs-dismiss="modal"
+              >
+                Next &raquo;
+              </button>
+            </div>
           </div>
-          <div class="modal-body">
-            <img src="img/adam-description2.png" class="img-fluid" alt="ADAM's Editor's Backend" />
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-              Close
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3>ADAM's Editor's Backend</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+          <img
+            src="img/adam-description2.png"
+            alt="ADAM's Editor's Backend"
+            class="img-fluid"
+            data-bs-toggle="modal"
+            data-bs-target="#adam2"
+          />
+          <p>
+            <button
+              type="button"
+              class="btn btn-outline-primary btn-sm m-2"
+              data-bs-toggle="modal"
+              data-bs-target="#adam1"
+            >
+              Zoom Image
             </button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adam1"
-              data-bs-dismiss="modal">
-              &laquo; Previous
-            </button>
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="adam2"
+        tabindex="-1"
+        aria-labelledby="adam2"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="adam2">ADAM's Editor's Backend</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                src="img/adam-description2.png"
+                class="img-fluid"
+                alt="ADAM's Editor's Backend"
+              />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#adam1"
+                data-bs-dismiss="modal"
+              >
+                &laquo; Previous
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <footer class="bg-dark text-muted py-5">
-    <div class="container">
-      <p class="float-end mb-1">
-        <a href="#">Back to top</a>
-      </p>
-      <p class="mb-1">
-        Showcase of side projects, videos and writing about comics, computer
-        history and development.
-      </p>
-    </div>
-  </footer>
-  <script src="js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <footer class="bg-dark text-muted p-5 row">
+      <div class="col-md-6 text-center">
+        <p class="mb-1">
+          Showcase of side projects, videos and writing about comics, computer
+          history and development.
+        </p>
+      </div>
+      <div class="col-md-3 text-center">
+        <p class="mb-1">
+          <a href="#" class="btn btn-sm btn-outline-secondary">Back to top</a>
+        </p>
+      </div>
+      <div class="col-md-3 text-center">
+        <p class="mb-1">
+          <a href="privacy-policy.html" class="btn btn-sm btn-outline-light"
+            >Privacy Policy</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
